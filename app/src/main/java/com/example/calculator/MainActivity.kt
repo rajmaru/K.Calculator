@@ -1,5 +1,7 @@
 package com.example.calculator
 
+// ver 1.0
+
 import android.os.Bundle
 import android.text.method.ScrollingMovementMethod
 import android.view.View
