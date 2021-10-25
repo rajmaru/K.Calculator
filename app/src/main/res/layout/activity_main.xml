@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="#111111">
+
+
+    <!-- Calculation Area -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dp"
+        android:layout_above="@+id/buttonLayout"
+        android:layout_marginBottom="20dp">
+
+        <!-- Input Numbers -->
+        <EditText
+            android:id="@+id/inputTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/transparent"
+            android:focusable="false"
+            android:fontFamily="@font/gilroy_extrabold"
+            android:singleLine="true"
+            android:text=""
+            android:textAlignment="viewEnd"
+            android:textColor="@color/white"
+            android:textSize="50sp"/>
+
+        <!-- Result -->
+        <EditText
+            android:id="@+id/resultTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/transparent"
+            android:focusable="false"
+            android:fontFamily="@font/gilroy_extrabold"
+            android:singleLine="true"
+            android:text=""
+            android:textAlignment="viewEnd"
+            android:textColor="@color/theme"
+            android:textSize="25sp" />
+
+     </LinearLayout>
+
+        <!-- Button Area -->
+    <LinearLayout
+        android:id="@+id/buttonLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+
+        <!-- Column 1 -->
+        <LinearLayout style="@style/buttonrow">
+
+            <android.widget.Button
+                android:id="@+id/btnClr"
+                style="@style/button"
+                android:background="@drawable/blackripple"
+                android:onClick="btnClrClicked"
+                android:text="C" />
+
+            <android.widget.Button
+                android:id="@+id/btn7"
+                style="@style/button"
+                android:text="7" />
+
+            <android.widget.Button
+                android:id="@+id/btn4"
+                style="@style/button"
+                android:text="4" />
+
+            <android.widget.Button
+                android:id="@+id/btn1"
+                style="@style/button"
+                android:text="1" />
+
+            <android.widget.Button
+                android:id="@+id/btn00"
+                style="@style/button"
+                android:text="00" />
+
+        </LinearLayout>
+
+        <!-- Column 2 -->
+        <LinearLayout style="@style/buttonrow">
+
+            <android.widget.Button
+                style="@style/buttonOperator"
+                android:text="÷"
+                android:textSize="35sp" />
+
+            <android.widget.Button
+                style="@style/button"
+                android:text="8" />
+
+            <android.widget.Button
+                style="@style/button"
+                android:text="5" />
+
+            <android.widget.Button
+                style="@style/button"
+                android:text="2" />
+
+            <android.widget.Button
+                style="@style/button"
+                android:text="0" />
+
+        </LinearLayout>
+
+        <!-- Column 3 -->
+        <LinearLayout style="@style/buttonrow">
+
+            <android.widget.Button
+                style="@style/buttonOperator"
+                android:text="%" />
+
+            <android.widget.Button
+                style="@style/button"
+                android:text="9" />
+
+            <android.widget.Button
+                style="@style/button"
+                android:text="6" />
+
+            <android.widget.Button
+                style="@style/button"
+                android:text="3" />
+
+            <android.widget.Button
+                style="@style/button"
+                android:onClick="btnDotClicked"
+                android:text="." />
+
+        </LinearLayout>
+
+        <!-- Column 4 -->
+        <LinearLayout style="@style/buttonrow">
+
+            <android.widget.Button
+                android:id="@+id/btnDel"
+                style="@style/button"
+                android:drawableTop="@drawable/ic_baseline_backspace_24"
+                android:drawableTint="@color/white"
+                android:onClick="btnDeleteClicked"
+                android:paddingTop="30dp" />
+
+            <android.widget.Button
+                style="@style/buttonOperator"
+                android:text="x"
+                android:textSize="24sp" />
+
+            <android.widget.Button
+                style="@style/buttonOperator"
+                android:text="-"
+                android:textSize="35sp" />
+
+            <android.widget.Button
+                style="@style/buttonOperator"
+                android:text="+"
+                android:textSize="35sp" />
+
+            <android.widget.Button
+                style="@style/button"
+                android:onClick="btnEqualClicked"
+                android:text="=" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>
