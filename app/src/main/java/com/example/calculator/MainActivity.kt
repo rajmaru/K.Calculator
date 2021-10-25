@@ -11,6 +11,7 @@ import javax.script.ScriptEngine
 import javax.script.ScriptEngineManager
 import javax.script.ScriptException
 
+
 class MainActivity : AppCompatActivity() {
     private var inputText = ""
     private var isOperatorUsed = false
